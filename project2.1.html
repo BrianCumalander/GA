@@ -5,53 +5,189 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brian's Blog</title>
     <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-
     <style>
-        header {
+        body {
             font-family: helvetica;
-            font-size: 36px;
-            background: url("");
-            background-position: cover;
         }
 
-        article {
-            font-size: 18px;
+        header {
+            text-align: center;
+            background: url("/assets/jeff-bg.png");
+            background-size: cover;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        img {
+            margin: 40px;
+            border: 7px solid white;
+            border-radius: 20px;
+        }
+
+        ul {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
         }
 
         li {
-            font-size: 18px;
             display: inline;
-            padding: 0px 5px 0px 5px;
+            padding: 0px 0px 0px 10px;
+        }
+
+        article {
+            width: 500px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+        }
+
+        footer:ul {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.716);
+        }
+
+        footer:li {
+            display: inline;
+            padding: 0px 0px 10px 0px;
+        }
+
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            li {
+                display: block;
+                padding: 5px;
+            }
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
         }
     </style>
+
+    <title>Brian's Blog</title>
 </head>
 
 <body>
-    <header>
-        <img src="" alt="profile photo of Brian">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <header id="top">
+        <img src="/assets/jeff.png" alt="profile photo of Brian">
+        <h1>Brian's Blog</h1>
         <ul>
             <li><a href=#about>About</a></li>
             <li><a href=#websites>Websites</a></li>
             <li><a href=#contact>Contact</a></li>
         </ul>
-        <article>
-            <p>I'm learning a lot through this tutorial.
-            </p>
-            <button>Like!</button>
-        </article>
-        <article id="about">My name is Brian. This is a page I made.
-        </article id="websites">This section will contain links to sites / pages I've made. </article>
-        <article id="contact">This will have a web form to fill out and will email me.</article>
     </header>
-
+    <article id="about">
+        <h2>About this site</h2>
+        <p>My name is Brian. This is a page I made. Cupidatat tempor elit dolore exercitation sint excepteur tempor
+            officia qui incididunt commodo magna. Consequat culpa dolore culpa quis quis mollit irure anim quis
+            excepteur. Ipsum mollit aute est irure ad laborum eu irure in ad sit adipisicing fugiat tempor. Laborum ea
+            nostrud veniam excepteur elit amet ut proident id in anim ut. Reprehenderit qui quis cupidatat
+            adipisicing.Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan
+            gentrify Echo Park. Street art swag brunch,
+            next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them
+            polaroid
+            hashtag +1, meggings biodiesel Portland High Life cra.
+        </p>
+        <button>Like!</button>
+    </article>
+    <article id="websites">
+        <h2>Websites</h2>
+        <p>This section will contain links to sites / pages I've made. In eiusmod cupidatat commodo exercitation sunt in
+            ea reprehenderit aliqua. Nisi culpa pariatur laborum eu eiusmod quis nulla ad amet enim quis laborum ea.
+            Voluptate pariatur occaecat nulla ex exercitation ipsum non cillum ea. Et duis adipisicing dolor cillum amet
+            officia amet incididunt commodo adipisicing.Sit ex ad duis qui in. Occaecat deserunt exercitation sint
+            excepteur sint eu ut ea consequat exercitation elit eu. Nisi irure qui est officia ut nulla fugiat tempor
+            ullamco nulla. Ex consequat consequat in est eu cillum velit adipisicing. Irure laboris non commodo duis
+            laborum fugiat ea nisi reprehenderit aute ea. Consectetur commodo eiusmod pariatur amet incididunt
+            irure.chambray you probably
+            haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies.
+            Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony
+            cliche
+            sustainable mlkshk bitters. Four loko leggings.
+        </p>
+        <button>Like!</button>
+    </article>
+    <article id="contact">
+        <h2>Contact Me</h2>
+        <p>This will have a web form to fill out and will email me. Eu dolore aute qui in consequat deserunt enim
+            aliquip mollit. Esse voluptate do sit excepteur magna laborum incididunt. Cillum proident qui adipisicing
+            irure sint. Laboris id do est sint esse.Lorem amet aute adipisicing eu est minim non irure consequat quis
+            consectetur commodo. Nulla officia consectetur nostrud ex sit labore pariatur ea sit. Aliqua nostrud quis
+            proident nostrud. Consequat deserunt ea duis ullamco ad ullamco nulla laboris labore veniam in. Et sunt duis
+            eiusmod quis occaecat nulla. ethical thundercats sustainable
+            locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle
+            rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage
+            YOLO polaroid.
+        </p>
+        <button>Like!</button>
+    </article>
+    <footer>
+        <ul>
+            <li>Blogging is fun</li>
+        </ul>
+    </footer>
 </body>
 
 <script>
+    //When the user clicks a Like! button, pop up an alert message
     $("button").on("click", function () {
         alert("You have Liked this post!")
     });
+</script>
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 </script>
 
 </html>
