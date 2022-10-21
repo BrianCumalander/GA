@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian's Blog</title>
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+
+    <style>
+        header {
+            font-family: helvetica;
+            font-size: 36px;
+            background: url("");
+            background-position: cover;
+        }
+
+        article {
+            font-size: 18px;
+        }
+
+        li {
+            font-size: 18px;
+            display: inline;
+            padding: 0px 5px 0px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="" alt="profile photo of Brian">
+        <ul>
+            <li><a href=#about>About</a></li>
+            <li><a href=#websites>Websites</a></li>
+            <li><a href=#contact>Contact</a></li>
+        </ul>
+        <article>
+            <p>I'm learning a lot through this tutorial.
+            </p>
+            <button>Like!</button>
+        </article>
+        <article id="about">My name is Brian. This is a page I made.
+        </article id="websites">This section will contain links to sites / pages I've made. </article>
+        <article id="contact">This will have a web form to fill out and will email me.</article>
+    </header>
+
+</body>
+
+<script>
+    $("button").on("click", function () {
+        alert("You have Liked this post!")
+    });
+</script>
+
+</html>
