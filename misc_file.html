@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Misc. stuff to try. has nothing to do with GA. Just foolin' around.<br>
+        have some js in here that I was curious about.</h1>
+
+
+    <main></main>
+    <!--for the js querySelector for the MadLib story-->
+
+</body>
+<script>
+    // 1. Declare variables and capture input.
+    let name = prompt("Give our character a name");
+    let thing = prompt("name a thing");
+    let plurl = prompt("give me a plurl thing");
+
+    // 2. Combine the input with other words to create a story.
+    let story = `<h2>MadLib Story</h2>This is the story of a guy named ${name} who lived in a ${thing}. <br>
+They loved living in the ${thing} so much that they invited all of their ${plurl}
+to live there too!`;
+
+    // 3. Display the story as a <p> inside the <main> element.
+    document.querySelector('main').innerHTML = story;
+
+    console.log(story);
+    console.log(`Items given were:
+            ${name}
+            ${thing}
+            ${plurl}
+            `);
+
+
+</script>
+
+</html>
