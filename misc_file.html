@@ -38,7 +38,18 @@ to live there too!`;
             ${plurl}
             `);
 
+    //---------------------------------
 
+    const answer = prompt("Which planet is closest to the sun?");
+    const realAns = "Murcury";
+
+    if (answer === realAns) {
+        console.log("That's correct!");
+    } else if (answer === "I don't know") {
+        console.log("Murcury");
+    } else {
+        console.log("Sorry, that's incorrect");
+    }
 </script>
 
 </html>
