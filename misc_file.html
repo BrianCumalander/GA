@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(39, 147, 214);
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -63,6 +69,104 @@ to live there too!`;
     }
 
     document.querySelector('main2').innerHTML = `${a} because if statements always looks for 'true' if it's not specified by a different conditional statement.`;
+
+
+
+    //-----------------------------------
+    let correctGuess = false;
+    const num = 6;
+    const guess = prompt('Guess a number between 1-10.');
+
+    // when guess is entered above, its type is string.
+    // doing the + unary opperator like here, changes its type to a number.
+    if (+guess === num) {
+        correctGuess = true;
+    }
+
+
+
+
+    //-------------------------------------------------
+    /* This one was a 5 question quiz. It kept giving 1 ans correct, Bronze ranking. I shortened the questions and just 
+    gave the answers in the question for testing purposes. Found out that I needed set up my RANK CONDITIONS to ask for highest points accumulated first, then less and less. AND, I couldn't use the OR || operators in the 
+    ranking section, it would goof up--and I was confused. So instead of understandig the issue, I folded and used the teacher's answer which was to use  correct >= (number greater than the next ranking). --This method I understand.
+      1. Store correct answers
+       - When quiz begins, no answers are correct
+    */
+    let correct = 0;
+
+    // 2. Store the rank of a player
+    let rank;
+
+    // 3. Select the <main> HTML element
+    const main = document.querySelector('main');
+
+    /*
+      4. Ask at least 5 questions
+       - Store each answer in a variable
+       - Keep track of the number of correct answers
+    */
+    const ans1 = prompt("5");
+    if (+ans1 === 5) {
+        correct += 1;
+    }
+
+    const ans2 = prompt("4");
+    if (ans2 === '4') {
+        correct += 1;
+    }
+
+    let ans3 = prompt('3');
+    if (ans3 === '3') {
+        correct += 1;
+    }
+
+    let ans4 = prompt('2');
+    if (ans4 === '2') {
+        correct += 1;
+    }
+
+    let ans5 = prompt('1');
+    if (ans5 === '1') {
+        correct += 1;
+    }
+
+
+    // RANK CONDITIONS -------------
+    if (correct === 5) {
+        rank = 'Gold';
+
+    } else if (correct >= 3) {
+        rank = 'Silver';
+
+    } else if (correct >= 2) {
+        rank = 'Bronze';
+
+    } else {
+        rank = "no crown";
+
+    }
+
+
+    /*
+      5. Rank player based on number of correct answers
+       - 5 correct = Gold
+       - 3-4 correct = Silver
+       - 1-2 correct = Bronze
+       - 0 correct = No crown
+    */
+
+
+    // 6. Output results to the <main> element
+
+    document.querySelector('main').innerHTML = `You have ${correct} points out of 5, your crown is ${rank}!`;
+
+//-------------------------------------------------
+
+
+
+
+
 </script>
 
 </html>
