@@ -15,8 +15,9 @@
 </head>
 
 <body>
-    <h1>Misc. stuff to try. has nothing to do with GA. Just foolin' around.<br>
-        have some js in here that I was curious about.</h1>
+    <h1>Learning JS</h1>
+    <div>Most of this page is filled with JavaScript and you can only <br>
+        find their outcomes in the console.</div>
 
 
     <main></main>
@@ -25,6 +26,11 @@
 
 </body>
 <script>
+    // primitive data types are pretty much the basics of data types in js.
+    // such as String, Number, Boolean.
+
+
+
     // 1. Declare variables and capture input.
     let name = prompt("Give our character a name");
     let thing = prompt("name a thing");
@@ -161,11 +167,62 @@ to live there too!`;
 
     document.querySelector('main').innerHTML = `You have ${correct} points out of 5, your crown is ${rank}!`;
 
-//-------------------------------------------------
+    //-------------------------------------------------
 
 
+    //short conversions to calculate how many seconds are in a day or 'since you've been alive'
+    const secsPerMin = 60
+    const minsPerHour = 60
+    const hoursPerDay = 24
+    const daysPerWeek = 7
+    const weeksPerYear = 52
+
+    const secondsPerDay = secsPerMin * minsPerHour * hoursPerDay
+    console.log(`There are ${secondsPerDay} seconds in a day.`)
+
+    const yearsAlive = prompt('How old are you?')
+    const secondsAlive = secondsPerDay * daysPerWeek * weeksPerYear * yearsAlive
+    console.log(`I've been alive for more than ${secondsAlive} seconds!`)
+    //----------------------------------------------
+
+    // changing the type of a number. Also known as type-casting. Only showing string to a number type casting here..
+    let num1 = 55; //type of number
+    let pi = '3.14'; //type of string, since it's in quotes
+    let ans = Number(pi) + num1; //changes the string pi in to a Number, then adds num1 to it as a number.
+    let altAns = +pi + num1; //unary opperator + changes pi to a number as well. answer is 58.14
+    console.log(typeof pi); //will give 'string' in the console. Will only give you the 'type of' of that item. The value will not be shown.
+    console.log(ans); // ans = 58.14
+    console.log('using the unary + opperator: ' + altAns); //answer is 58.14
+    console.log(`back-tics, pi is ${+pi}, plus num1 of 55 = ${+pi + num1}.`); //just being clever and using back-tic's, and in-line code snippets :)
+    // others are parseInt(value), which only changes a string to an Int.
+    console.log(parseInt(pi)); //now its type is 3.   --only returns 3 because you asked for an Int, not the Float!
+    console.log(parseFloat(pi)); // gives 3.14
+    console.log(Number(pi)); // gives 3.14, some argue that this is a bit slower since you have to type or read 'Number()' rather than just using the + unarary opperator.
+    let uuid = '314-sdf-32kd';
+    console.log(parseInt(uuid)); //returns 314 and drops the rest. Can be useful if you are actually looking to return such an answer.
+
+    // a perfect example is below. You are trying to find the total width of several images in your web page.
+    const width = '190px'; //string
+    const totalImages = 10; //number
+    let totalWidth = parseInt(width) * totalImages;
+    /* ^^ - parseInt and parseFloat are the only ones that you can use that will take the 190 and drop the px string characters
+       so that you can evaluate the code. +,Number() return NaN (Not a Number). 
+    */
+    console.log(totalWidth);
 
 
+    //----------------------------------------------
+
+    // object types
+
+    // Math object
+    console.log(Math.round(44.7)) // 45
+    console.log(Math.max(1, 3, 2)) // 3
+    console.log(Math.min(1, 3, 2)) // 1
+    console.log(Math.floor(5.5)) // 5   always rounds down to the whole number.
+    console.log(Math.floor(5.95)); // expected output: 5
+    console.log(Math.floor(-5.05)); // expected output: -6
+    console.log(Math.ceil(5.05)); // 6  always rounds up to the next whole number.
 
 </script>
 
