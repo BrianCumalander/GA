@@ -22,6 +22,7 @@
 
     <main></main>
     <main2></main2>
+    <main3></main3>
     <!--for the js querySelector for the MadLib story-->
 
 </body>
@@ -223,6 +224,114 @@ to live there too!`;
     console.log(Math.floor(5.95)); // expected output: 5
     console.log(Math.floor(-5.05)); // expected output: -6
     console.log(Math.ceil(5.05)); // 6  always rounds up to the next whole number.
+
+    console.log(Math.floor(Math.random() * 6));
+    // .floor grabs lowest whole number.
+    // .random gives us a random number beetween 0 and 1 but not 1.
+    // * 6 multiplies the random number by 6.
+    // so, if you get 0.26858698121888613, multiply it by 6, it gives you 1.611521887313317
+    // so you can use Math.floor to drop it down to a usable number of 1 in this case.
+
+    /* so, if I had 6 dice, and I wanted random numbers between 1 and 6,
+       I'd have to use Math.floor( Math.random() * 6) + 1;
+       --It will always give at least 1, and no more than 6 (because when Math.random is run, its always 0.xxxxxxxx instead of 1.xxxxxxxx).
+    
+       You would not however, want to run Math.ceil  because it's possible 
+       that it would return 0, and 0 lies outside of our criteria.
+    
+        const dieRoll = Math.floor( Math.random() * 6) + 1;
+        console.log(`You rolled a ${dieRoll}`);
+    
+    */
+
+
+
+
+
+
+    //----------------------------------
+    // Collect input from a user
+    const lowNum = prompt("Enter a low number");
+    const highNum = prompt("Enter a number high number");
+
+
+    // Convert the input to a number
+    let lowConvertedNum = parseInt(lowNum);
+    let highConvertedNum = parseInt(highNum);
+
+
+
+    if (lowConvertedNum && highConvertedNum) {
+
+        // Use Math.random() and the user's number to generate a random number
+        let randomNumber = Math.floor(Math.random() * (highConvertedNum = lowConvertedNum + 1)) + lowConvertedNum;
+
+        // Create a message displaying the random number
+        console.log(`${randomNumber} is a random number between ${lowNum} and ${highNum}!`);
+
+    } else {
+        console.log('You need to provide two numbers. Try again.');
+    }// answer:   Out of 1 - 44, the random number is 37!
+    //----------------------------------
+
+
+
+
+    // 1. Attach this file -- math.js -- to the index.html file using a <script> tag
+    // done.
+    // 2. Add an alert to announce the program with a message like "Let's do some math!"
+    alert("Lets do some math!!");
+    // 3. Create a variable and use the prompt() method to collect a number from a visitor
+    var n1 = prompt("Enter a number");
+    // 4. Convert that value from a string to a floating point number
+    var n1 = parseFloat(n1);
+    // 5. Repeat steps 3 and 4 to create a second variable and collect a second number
+    var n2 = prompt("Enter a second number");
+    var n2 = parseFloat(n2);
+    // 6. Create a new variable -- message -- which you'll use to build
+    //    a complete message to print to the document
+    //    Start by creating a string that includes <h1> tags as well
+    //    and the two input numbers. The string should look something like this:
+    //    "<h1>Math  with the numbers 3 and 4</h1>" where the two numbers are
+    //    the values input from the user. Use string concatenation to create this
+    //    and make sure you actually perform the math on the values by 
+    //    using the + symbol to add their values together
+
+    let a1
+    let a2
+    let a3
+    let a4
+
+    let final = `<h1>Math with numbers ${n1} and ${n2}</h1><p>${n1} + ${n2} = ${a1 = n1 + n2}<br>${n1} * ${n2} = ${a1 = n1 * n2}<br>${n1} / ${n2} = ${a1 = n1 / n2}<br>${n1} - ${n2} = ${a1 = n1 - n2}<br>`;
+    // 7. Add another string to the message variable. 
+    //    The string should look something like this after concatenation:
+    //    "3 + 4 = 7"
+
+    // 8. Add a linebreak tag -- <br> -- to the message variable
+
+    // 9. Continue to add to the message variable to include strings
+    //    demonstrating multiplication, division and subtraction
+    //    For example:
+    //    "3 * 4 = 12"
+    //    "3 / 4 = 0.75"
+    //    "3 - 4 = -1"
+
+    // 10. Use the document.write() method to print the message variable 
+    //     to the web page. Open the finished.png file in this workspace
+    //     to see what the completed output should look like
+
+
+
+    document.querySelector('main').innerHTML = final;
+
+
+
+
+
+
+
+
+
 
 </script>
 
